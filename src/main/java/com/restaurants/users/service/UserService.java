@@ -2,8 +2,11 @@ package com.restaurants.users.service;
 
 import com.restaurants.users.Dto.UserDto;
 
-public interface UserService {
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public interface UserService extends UserDetailsService {
 
     UserDto createUser(UserDto userDetails);
+    UserDto getUserDetailsByEmail(String email);
 
 }
